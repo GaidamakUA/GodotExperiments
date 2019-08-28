@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/fa_aka_f.wav-a2efc38d76fd08389a58a82548868e24.sample"
+
+[deps]
+
+source_file="res://assets/fa_aka_f.wav"
+dest_files=[ "res://.import/fa_aka_f.wav-a2efc38d76fd08389a58a82548868e24.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

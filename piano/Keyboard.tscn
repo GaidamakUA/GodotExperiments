@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://InteractiveKeyWhite.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/do_aka_c.wav" type="AudioStream" id=2]
+[ext_resource path="res://assets/re_aka_d.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/mi_aka_e.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/fa_aka_f.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/sol_aka_g.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/la_aka_a.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/si_aka_b.wav" type="AudioStream" id=8]
+[ext_resource path="res://InteractiveKeyBlack.tscn" type="PackedScene" id=9]
+
+[node name="Keyboard" type="Node2D"]
+position = Vector2( 168, 100 )
+scale = Vector2( 8, 8 )
+
+[node name="WhiteKeys" type="Node2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="InteractiveKey" parent="WhiteKeys" instance=ExtResource( 1 )]
+position = Vector2( -15, 0 )
+leftmost = true
+note_sound = ExtResource( 2 )
+
+[node name="InteractiveKey2" parent="WhiteKeys" instance=ExtResource( 1 )]
+position = Vector2( -10, 0 )
+note_sound = ExtResource( 3 )
+
+[node name="InteractiveKey3" parent="WhiteKeys" instance=ExtResource( 1 )]
+position = Vector2( -5, 0 )
+note_sound = ExtResource( 4 )
+
+[node name="InteractiveKey4" parent="WhiteKeys" instance=ExtResource( 1 )]
+note_sound = ExtResource( 5 )
+
+[node name="InteractiveKey5" parent="WhiteKeys" instance=ExtResource( 1 )]
+position = Vector2( 5, 0 )
+note_sound = ExtResource( 6 )
+
+[node name="InteractiveKey6" parent="WhiteKeys" instance=ExtResource( 1 )]
+position = Vector2( 10, 0 )
+note_sound = ExtResource( 7 )
+
+[node name="InteractiveKey7" parent="WhiteKeys" instance=ExtResource( 1 )]
+position = Vector2( 15, 0 )
+note_sound = ExtResource( 8 )
+
+[node name="BlackKeys" type="Node2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="InteractiveKeyBlack" parent="BlackKeys" instance=ExtResource( 9 )]
+position = Vector2( -12, -4 )
+
+[node name="InteractiveKeyBlack2" parent="BlackKeys" instance=ExtResource( 9 )]
+position = Vector2( -7, -4 )
+
+[node name="InteractiveKeyBlack3" parent="BlackKeys" instance=ExtResource( 9 )]
+position = Vector2( 3, -4 )
+
+[node name="InteractiveKeyBlack4" parent="BlackKeys" instance=ExtResource( 9 )]
+position = Vector2( 8, -4 )
+
+[node name="InteractiveKeyBlack5" parent="BlackKeys" instance=ExtResource( 9 )]
+position = Vector2( 13, -4 )

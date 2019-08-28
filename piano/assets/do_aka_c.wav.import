@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/do_aka_c.wav-78c6f3f83df2e8d088915b376400318a.sample"
+
+[deps]
+
+source_file="res://assets/do_aka_c.wav"
+dest_files=[ "res://.import/do_aka_c.wav-78c6f3f83df2e8d088915b376400318a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

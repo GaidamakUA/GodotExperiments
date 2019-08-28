@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/si_aka_b.wav-b8b303a07c9de4490464c17165661254.sample"
+
+[deps]
+
+source_file="res://assets/si_aka_b.wav"
+dest_files=[ "res://.import/si_aka_b.wav-b8b303a07c9de4490464c17165661254.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

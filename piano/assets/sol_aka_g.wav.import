@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sol_aka_g.wav-41a839d38122c4cc09d7e29f7508f342.sample"
+
+[deps]
+
+source_file="res://assets/sol_aka_g.wav"
+dest_files=[ "res://.import/sol_aka_g.wav-41a839d38122c4cc09d7e29f7508f342.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
