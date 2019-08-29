@@ -19,8 +19,6 @@ func _ready():
 			astar.connect_points(cell_id, neighbour_id)
 	var firstCell: Vector2 = used_cells[0]
 	var firstCellCoordinates = $TileMap.map_to_world(firstCell)
-	$MainCharacter.position = firstCellCoordinates
-	$RandomWalker.position = firstCellCoordinates
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton \
