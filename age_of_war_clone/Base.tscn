@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Base.gd" type="Script" id=1]
+[ext_resource path="res://assets/0x72_DungeonTilesetII_v1.3.png" type="Texture" id=2]
+[ext_resource path="res://Hp.gd" type="Script" id=3]
+[ext_resource path="res://SpawningArea.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16, 32 )
+
+[node name="Base" type="StaticBody2D"]
+collision_layer = 8
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 32, 128, 32, 32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Hp" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="SpawningArea" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 3
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpawningArea"]
+shape = SubResource( 2 )
+
+[node name="SpawningPoint" type="Position2D" parent="."]
+position = Vector2( 0, 16 )
+[connection signal="died" from="Hp" to="." method="_on_Hp_died"]
+[connection signal="body_entered" from="SpawningArea" to="SpawningArea" method="_on_SpawningArea_body_entered"]
+[connection signal="body_exited" from="SpawningArea" to="SpawningArea" method="_on_SpawningArea_body_exited"]
