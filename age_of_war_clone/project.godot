@@ -1,0 +1,53 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "StaticBody2D",
+"class": "Base",
+"language": "GDScript",
+"path": "res://Base.gd"
+}, {
+"base": "Node",
+"class": "Hp",
+"language": "GDScript",
+"path": "res://Hp.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "OneByOneMob",
+"language": "GDScript",
+"path": "res://OneByOneMob.gd"
+} ]
+_global_script_class_icons={
+"Base": "",
+"Hp": "",
+"OneByOneMob": ""
+}
+
+[application]
+
+config/name="AgeOfWarClone"
+run/main_scene="res://GameScreen.tscn"
+config/icon="res://icon.png"
+
+[display]
+
+window/size/width=640
+window/size/height=400
+
+[layer_names]
+
+2d_physics/layer_1="Player 1"
+2d_physics/layer_2="Player 2"
+2d_physics/layer_3="Base 1"
+2d_physics/layer_4="Base 2"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
