@@ -93,4 +93,11 @@ anims/Setup = SubResource( 4 )
 
 [node name="Hp" type="Node" parent="."]
 script = ExtResource( 3 )
+
+[node name="HpBar" type="Sprite" parent="."]
+position = Vector2( 0, -18 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 19, 197, 10, 3 )
 [connection signal="died" from="Hp" to="." method="_on_Hp_died"]
+[connection signal="hp_changed" from="Hp" to="." method="_on_Hp_hp_changed"]

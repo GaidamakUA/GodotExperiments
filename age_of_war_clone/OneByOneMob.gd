@@ -38,13 +38,11 @@ func _physics_process(delta):
 		var colliding_enemy_base = collider.get_collision_layer_bit(collision_bit_enemy_base)
 		var colliding_ally = collider.get_collision_layer_bit(collision_bit_ally)
 		if colliding_enemy || colliding_enemy_base:
-			print("travel red: ", collision_info.travel)
 			$Sprite.modulate = Color.red
 			if not $AnimationPlayer.current_animation == "Attack":
 				$AnimationPlayer.play("Attack")
 				enemy_hp = collider.find_node("Hp")
 		elif colliding_ally:
-			print("travel green: ", collision_info.travel)
 			$Sprite.modulate = Color.green
 			if $AnimationPlayer.is_playing():
 				$AnimationPlayer.stop()
@@ -59,3 +57,8 @@ func _attack_enemy():
 
 func _on_Hp_died():
 	queue_free()
+
+func _on_Hp_hp_changed(hp: int):
+	var scale: float = hp as float / $Hp.max_hp
+	print("scale: ", scale)
+	$HpBar.scale = Vector2(scale, 1)

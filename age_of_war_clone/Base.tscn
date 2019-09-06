@@ -37,6 +37,14 @@ shape = SubResource( 2 )
 
 [node name="SpawningPoint" type="Position2D" parent="."]
 position = Vector2( 0, 16 )
+
+[node name="HpBar" type="Sprite" parent="."]
+position = Vector2( 0, -38 )
+scale = Vector2( 6, 1 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 19, 197, 10, 3 )
 [connection signal="died" from="Hp" to="." method="_on_Hp_died"]
+[connection signal="hp_changed" from="Hp" to="." method="_on_Hp_hp_changed"]
 [connection signal="body_entered" from="SpawningArea" to="SpawningArea" method="_on_SpawningArea_body_entered"]
 [connection signal="body_exited" from="SpawningArea" to="SpawningArea" method="_on_SpawningArea_body_exited"]
