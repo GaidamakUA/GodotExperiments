@@ -32,19 +32,20 @@ func _set_player_number(player_number: int):
 
 func _physics_process(delta):
 	var collision_info := move_and_collide(velocity)
-	if collision_info:
+	if collision_info && collision_info.travel.length() < 0.9:
 		var collider := collision_info.collider as PhysicsBody2D
 		var colliding_enemy = collider.get_collision_layer_bit(collision_bit_enemy)
 		var colliding_enemy_base = collider.get_collision_layer_bit(collision_bit_enemy_base)
 		var colliding_ally = collider.get_collision_layer_bit(collision_bit_ally)
 		if colliding_enemy || colliding_enemy_base:
+			print("travel red: ", collision_info.travel)
 			$Sprite.modulate = Color.red
 			if not $AnimationPlayer.current_animation == "Attack":
 				$AnimationPlayer.play("Attack")
 				enemy_hp = collider.find_node("Hp")
 		elif colliding_ally:
+			print("travel green: ", collision_info.travel)
 			$Sprite.modulate = Color.green
-			print("colliding_ally")
 			if $AnimationPlayer.is_playing():
 				$AnimationPlayer.stop()
 				$Sprite.frame = 0
