@@ -8,6 +8,9 @@ var velocity: Vector2
 func _physics_process(delta):
 	var collision := move_and_collide(velocity)
 	if collision:
+		if collision.collider is Target:
+			var taget := collision.collider as Target
+			taget.queue_free()
 		var reflect = collision.remainder.bounce(collision.normal)
 		velocity = velocity.bounce(collision.normal)
 		move_and_collide(reflect)

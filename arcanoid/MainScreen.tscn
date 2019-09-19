@@ -1,14 +1,15 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://MainScreen.gd" type="Script" id=1]
 [ext_resource path="res://arcadArne_sheet.png" type="Texture" id=2]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Ball.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Target.tscn" type="PackedScene" id=5]
 
-[sub_resource type="ConvexPolygonShape2D" id=2]
+[sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="TileSet" id=1]
+[sub_resource type="TileSet" id=2]
 0/name = "arcadArne_sheet.png 0"
 0/texture = ExtResource( 2 )
 0/tex_offset = Vector2( 0, 0 )
@@ -21,7 +22,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 2 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
@@ -32,8 +33,8 @@ extents = Vector2( 224, 32 )
 [node name="MainScreen" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 1 )
+[node name="Walls" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
 cell_size = Vector2( 16, 16 )
 collision_mask = 0
 format = 1
@@ -56,4 +57,240 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 0, 16 )
 shape = SubResource( 3 )
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 32, 72 )
+
+[node name="row" type="Node2D" parent="Node2D"]
+editor/display_folded = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Target" parent="Node2D/row" instance=ExtResource( 5 )]
+
+[node name="Target5" parent="Node2D/row" instance=ExtResource( 5 )]
+position = Vector2( 128, 0 )
+
+[node name="Target2" parent="Node2D/row" instance=ExtResource( 5 )]
+position = Vector2( 32, 0 )
+
+[node name="Target6" parent="Node2D/row" instance=ExtResource( 5 )]
+position = Vector2( 160, 0 )
+
+[node name="Target3" parent="Node2D/row" instance=ExtResource( 5 )]
+position = Vector2( 64, 0 )
+
+[node name="Target7" parent="Node2D/row" instance=ExtResource( 5 )]
+position = Vector2( 192, 0 )
+
+[node name="Target9" parent="Node2D/row" instance=ExtResource( 5 )]
+position = Vector2( 256, 0 )
+
+[node name="Target4" parent="Node2D/row" instance=ExtResource( 5 )]
+position = Vector2( 96, 0 )
+
+[node name="Target8" parent="Node2D/row" instance=ExtResource( 5 )]
+position = Vector2( 224, 0 )
+
+[node name="Target10" parent="Node2D/row" instance=ExtResource( 5 )]
+position = Vector2( 288, 0 )
+
+[node name="Target11" parent="Node2D/row" instance=ExtResource( 5 )]
+position = Vector2( 320, 0 )
+
+[node name="row2" type="Node2D" parent="Node2D"]
+editor/display_folded = true
+position = Vector2( 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Target" parent="Node2D/row2" instance=ExtResource( 5 )]
+
+[node name="Target5" parent="Node2D/row2" instance=ExtResource( 5 )]
+position = Vector2( 128, 0 )
+
+[node name="Target2" parent="Node2D/row2" instance=ExtResource( 5 )]
+position = Vector2( 32, 0 )
+
+[node name="Target6" parent="Node2D/row2" instance=ExtResource( 5 )]
+position = Vector2( 160, 0 )
+
+[node name="Target3" parent="Node2D/row2" instance=ExtResource( 5 )]
+position = Vector2( 64, 0 )
+
+[node name="Target7" parent="Node2D/row2" instance=ExtResource( 5 )]
+position = Vector2( 192, 0 )
+
+[node name="Target9" parent="Node2D/row2" instance=ExtResource( 5 )]
+position = Vector2( 256, 0 )
+
+[node name="Target4" parent="Node2D/row2" instance=ExtResource( 5 )]
+position = Vector2( 96, 0 )
+
+[node name="Target8" parent="Node2D/row2" instance=ExtResource( 5 )]
+position = Vector2( 224, 0 )
+
+[node name="Target10" parent="Node2D/row2" instance=ExtResource( 5 )]
+position = Vector2( 288, 0 )
+
+[node name="Target11" parent="Node2D/row2" instance=ExtResource( 5 )]
+position = Vector2( 320, 0 )
+
+[node name="row4" type="Node2D" parent="Node2D"]
+editor/display_folded = true
+position = Vector2( 0, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Target" parent="Node2D/row4" instance=ExtResource( 5 )]
+
+[node name="Target5" parent="Node2D/row4" instance=ExtResource( 5 )]
+position = Vector2( 128, 0 )
+
+[node name="Target2" parent="Node2D/row4" instance=ExtResource( 5 )]
+position = Vector2( 32, 0 )
+
+[node name="Target6" parent="Node2D/row4" instance=ExtResource( 5 )]
+position = Vector2( 160, 0 )
+
+[node name="Target3" parent="Node2D/row4" instance=ExtResource( 5 )]
+position = Vector2( 64, 0 )
+
+[node name="Target7" parent="Node2D/row4" instance=ExtResource( 5 )]
+position = Vector2( 192, 0 )
+
+[node name="Target9" parent="Node2D/row4" instance=ExtResource( 5 )]
+position = Vector2( 256, 0 )
+
+[node name="Target4" parent="Node2D/row4" instance=ExtResource( 5 )]
+position = Vector2( 96, 0 )
+
+[node name="Target8" parent="Node2D/row4" instance=ExtResource( 5 )]
+position = Vector2( 224, 0 )
+
+[node name="Target10" parent="Node2D/row4" instance=ExtResource( 5 )]
+position = Vector2( 288, 0 )
+
+[node name="Target11" parent="Node2D/row4" instance=ExtResource( 5 )]
+position = Vector2( 320, 0 )
+
+[node name="row3" type="Node2D" parent="Node2D"]
+editor/display_folded = true
+position = Vector2( 16, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Target" parent="Node2D/row3" instance=ExtResource( 5 )]
+
+[node name="Target5" parent="Node2D/row3" instance=ExtResource( 5 )]
+position = Vector2( 128, 0 )
+
+[node name="Target2" parent="Node2D/row3" instance=ExtResource( 5 )]
+position = Vector2( 32, 0 )
+
+[node name="Target6" parent="Node2D/row3" instance=ExtResource( 5 )]
+position = Vector2( 160, 0 )
+
+[node name="Target3" parent="Node2D/row3" instance=ExtResource( 5 )]
+position = Vector2( 64, 0 )
+
+[node name="Target7" parent="Node2D/row3" instance=ExtResource( 5 )]
+position = Vector2( 192, 0 )
+
+[node name="Target9" parent="Node2D/row3" instance=ExtResource( 5 )]
+position = Vector2( 256, 0 )
+
+[node name="Target4" parent="Node2D/row3" instance=ExtResource( 5 )]
+position = Vector2( 96, 0 )
+
+[node name="Target8" parent="Node2D/row3" instance=ExtResource( 5 )]
+position = Vector2( 224, 0 )
+
+[node name="Target10" parent="Node2D/row3" instance=ExtResource( 5 )]
+position = Vector2( 288, 0 )
+
+[node name="Target11" parent="Node2D/row3" instance=ExtResource( 5 )]
+position = Vector2( 320, 0 )
+
+[node name="row5" type="Node2D" parent="Node2D"]
+editor/display_folded = true
+position = Vector2( 16, 80 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Target" parent="Node2D/row5" instance=ExtResource( 5 )]
+
+[node name="Target5" parent="Node2D/row5" instance=ExtResource( 5 )]
+position = Vector2( 128, 0 )
+
+[node name="Target2" parent="Node2D/row5" instance=ExtResource( 5 )]
+position = Vector2( 32, 0 )
+
+[node name="Target6" parent="Node2D/row5" instance=ExtResource( 5 )]
+position = Vector2( 160, 0 )
+
+[node name="Target3" parent="Node2D/row5" instance=ExtResource( 5 )]
+position = Vector2( 64, 0 )
+
+[node name="Target7" parent="Node2D/row5" instance=ExtResource( 5 )]
+position = Vector2( 192, 0 )
+
+[node name="Target9" parent="Node2D/row5" instance=ExtResource( 5 )]
+position = Vector2( 256, 0 )
+
+[node name="Target4" parent="Node2D/row5" instance=ExtResource( 5 )]
+position = Vector2( 96, 0 )
+
+[node name="Target8" parent="Node2D/row5" instance=ExtResource( 5 )]
+position = Vector2( 224, 0 )
+
+[node name="Target10" parent="Node2D/row5" instance=ExtResource( 5 )]
+position = Vector2( 288, 0 )
+
+[node name="Target11" parent="Node2D/row5" instance=ExtResource( 5 )]
+position = Vector2( 320, 0 )
+
+[node name="row6" type="Node2D" parent="Node2D"]
+editor/display_folded = true
+position = Vector2( 0, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Target" parent="Node2D/row6" instance=ExtResource( 5 )]
+
+[node name="Target5" parent="Node2D/row6" instance=ExtResource( 5 )]
+position = Vector2( 128, 0 )
+
+[node name="Target2" parent="Node2D/row6" instance=ExtResource( 5 )]
+position = Vector2( 32, 0 )
+
+[node name="Target6" parent="Node2D/row6" instance=ExtResource( 5 )]
+position = Vector2( 160, 0 )
+
+[node name="Target3" parent="Node2D/row6" instance=ExtResource( 5 )]
+position = Vector2( 64, 0 )
+
+[node name="Target7" parent="Node2D/row6" instance=ExtResource( 5 )]
+position = Vector2( 192, 0 )
+
+[node name="Target9" parent="Node2D/row6" instance=ExtResource( 5 )]
+position = Vector2( 256, 0 )
+
+[node name="Target4" parent="Node2D/row6" instance=ExtResource( 5 )]
+position = Vector2( 96, 0 )
+
+[node name="Target8" parent="Node2D/row6" instance=ExtResource( 5 )]
+position = Vector2( 224, 0 )
+
+[node name="Target10" parent="Node2D/row6" instance=ExtResource( 5 )]
+position = Vector2( 288, 0 )
+
+[node name="Target11" parent="Node2D/row6" instance=ExtResource( 5 )]
+position = Vector2( 320, 0 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
