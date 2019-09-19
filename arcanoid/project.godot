@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Ball",
+"language": "GDScript",
+"path": "res://Ball.gd"
+} ]
 _global_script_class_icons={
-
+"Ball": ""
 }
 
 [application]
@@ -23,6 +28,11 @@ config/icon="res://icon.png"
 
 window/size/width=400
 window/size/height=640
+
+[layer_names]
+
+2d_physics/layer_1="everything"
+2d_physics/layer_2="ball"
 
 [physics]
 
