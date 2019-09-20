@@ -4,7 +4,7 @@ Simple gachi themed arcanoid/Break Out clone
 ## Active sprint. End: 2019.28.10
 - [x] Add targets (1) add blocks to bounce on contact. 1h
     - [x] Destruction of targets (2) make targets destructable. 1h
-- [ ] Main menu (3) 3h
+- [x] Main menu (3) 3h
 - [ ] Loss flow (4) 2h
 
 ## Backlog
