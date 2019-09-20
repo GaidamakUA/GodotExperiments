@@ -1,10 +1,17 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://MainScreen.gd" type="Script" id=1]
+[ext_resource path="res://scenes/MainScreen.gd" type="Script" id=1]
 [ext_resource path="res://arcadArne_sheet.png" type="Texture" id=2]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Ball.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Target.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/objects/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/objects/Ball.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/objects/Target.tscn" type="PackedScene" id=5]
+
+
+
+
+
+
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )

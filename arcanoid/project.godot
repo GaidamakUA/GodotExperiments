@@ -12,12 +12,12 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Ball",
 "language": "GDScript",
-"path": "res://Ball.gd"
+"path": "res://scenes/objects/Ball.gd"
 }, {
 "base": "StaticBody2D",
 "class": "Target",
 "language": "GDScript",
-"path": "res://Target.gd"
+"path": "res://scenes/objects/Target.gd"
 } ]
 _global_script_class_icons={
 "Ball": "",
@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Arcanoid"
-run/main_scene="res://MainScreen.tscn"
+run/main_scene="res://scenes/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -46,4 +46,4 @@ window/size/height=640
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://scenes/default_env.tres"
