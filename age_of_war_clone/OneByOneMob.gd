@@ -52,6 +52,11 @@ func _physics_process(delta):
 		if not $AnimationPlayer.current_animation == "Running":
 			$AnimationPlayer.play("Running")
 
+func end_game():
+	print("caught game_end")
+	set_physics_process(false)
+	$AnimationPlayer.stop()
+
 func _attack_enemy():
 	enemy_hp.damage(attack)
 

@@ -15,7 +15,7 @@ func _on_SpawnButton_pressed() -> void:
 		return
 	var instance := SpawnScene.instance()
 	instance.player_number = player_number
-	(get_parent() as Node2D).add_child(instance)
+	(get_parent() as GameScreen).add_spawn(instance)
 	instance.global_position = $SpawningPoint.global_position
 
 func _on_Hp_hp_changed(hp: int):
