@@ -46,4 +46,5 @@ window/size/height=640
 
 [rendering]
 
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://scenes/default_env.tres"
