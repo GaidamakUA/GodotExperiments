@@ -67,7 +67,7 @@ func load_data(db) -> void:
 		var csv: PoolStringArray = file.get_csv_line("|")
 		if csv.size() == 1:
 			continue
-		var inser_command: String = "INSERT INTO hardware VALUES (\"" + csv[0] + "\",\""  + csv[1] + "\",\""  + csv[2] + "\")"
+		var inser_command: String = "INSERT INTO lobby VALUES (\"" + csv[0] + "\",\""  + csv[1] + "\",\""  + csv[2] + "\")"
 		db.query(inser_command)
 
 	file.open("res://data/security.del", file.READ)
@@ -75,12 +75,12 @@ func load_data(db) -> void:
 		var csv: PoolStringArray = file.get_csv_line("|")
 		if csv.size() == 1:
 			continue
-		var inser_command: String = "INSERT INTO hardware VALUES (\"" + csv[0] + "\",\""  + csv[1] + "\",\""  + csv[2] + "\",\""  + csv[3] + "\""
+		var inser_command: String = "INSERT INTO lobby VALUES (\"" + csv[0] + "\",\""  + csv[1] + "\",\""  + csv[2] + "\",\""  + csv[3] + "\""
 		db.query(inser_command)
 
 func _on_SubmitButton_pressed():
 	var text: String = $TextEdit.text
 	db.open_db()
 	db.query(text)
-	$Output.text = String(db.query_result)
+	$Output.set_result(db.query_result)
 	db.close_db()
