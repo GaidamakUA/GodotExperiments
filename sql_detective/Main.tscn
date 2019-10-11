@@ -32,4 +32,4 @@ theme = ExtResource( 2 )
 bbcode_enabled = true
 selection_enabled = true
 script = ExtResource( 3 )
-[connection signal="pressed" from="SubmitButton" to="." method="_on_SubmitButton_pressed"]
+[connection signal="pressed" from="SubmitButton" to="." method="submit"]

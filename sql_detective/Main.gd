@@ -78,7 +78,7 @@ func load_data(db) -> void:
 		var inser_command: String = "INSERT INTO lobby VALUES (\"" + csv[0] + "\",\""  + csv[1] + "\",\""  + csv[2] + "\",\""  + csv[3] + "\""
 		db.query(inser_command)
 
-func _on_SubmitButton_pressed():
+func submit():
 	var text: String = $TextEdit.text
 	db.open_db()
 	db.query(text)
