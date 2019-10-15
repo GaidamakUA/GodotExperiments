@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "RichTextLabel",
+"class": "TextOutput",
+"language": "GDScript",
+"path": "res://TextOutput.gd"
+} ]
 _global_script_class_icons={
-
+"TextOutput": ""
 }
 
 [application]

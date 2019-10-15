@@ -4,6 +4,9 @@ const SQLite = preload("res://bin/gdsqlite.gdns")
 var db_name = "res://data/test"
 var db = SQLite.new()
 
+onready var text_input = $Node/MarginContainer/VBoxContainer/TextInput
+onready var text_output = $Node/MarginContainer/VBoxContainer/Panel/Output
+
 func _ready():
 	db.path = db_name
 	db.verbose_mode = false#true
@@ -75,7 +78,7 @@ func load_data(db) -> void:
 		var csv: PoolStringArray = file.get_csv_line("|")
 		if csv.size() == 1:
 			continue
-		var inser_command: String = "INSERT INTO lobby VALUES (\"" + csv[0] + "\",\""  + csv[1] + "\",\""  + csv[2] + "\",\""  + csv[3] + "\""
+		var inser_command: String = "INSERT INTO security VALUES (\"" + csv[0] + "\",\""  + csv[1] + "\",\""  + csv[2] + "\",\""  + csv[3] + "\")"
 		db.query(inser_command)
 
 func _input(event):
@@ -83,8 +86,8 @@ func _input(event):
 		submit()
 
 func submit():
-	var text: String = $TextEdit.text
+	var text: String = text_input.text
 	db.open_db()
 	db.query(text)
-	$Output.set_result(db.query_result)
+	text_output.set_result(db.query_result)
 	db.close_db()
