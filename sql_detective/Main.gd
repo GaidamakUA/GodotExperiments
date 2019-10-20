@@ -1,11 +1,11 @@
-extends Node2D
+extends Node
 
 const SQLite = preload("res://bin/gdsqlite.gdns")
 var db_name = "res://data/test"
 var db = SQLite.new()
 
-onready var text_input = $Node/MarginContainer/VBoxContainer/TextInput
-onready var text_output = $Node/MarginContainer/VBoxContainer/Panel/Output
+onready var text_input = $MarginContainer/VBoxContainer/TextInput
+onready var text_output = $MarginContainer/VBoxContainer/Panel/Output
 
 func _ready():
 	db.path = db_name
@@ -45,6 +45,7 @@ func _ready():
 	print("There are ", db.query_result)
 	load_data(db)
 	db.close_db()
+	$ScenarioDialog.popup()
 
 func load_data(db) -> void:
 	var file = File.new()
@@ -91,3 +92,9 @@ func submit():
 	db.query(text)
 	text_output.set_result(db.query_result)
 	db.close_db()
+
+func _on_ShowDatabaseButton_pressed():
+	$DatabasePopup.popup()
+
+func _on_ShowCluesButton_pressed():
+	$CluesPopup.popup()
