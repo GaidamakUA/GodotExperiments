@@ -4,8 +4,8 @@ const SQLite = preload("res://bin/gdsqlite.gdns")
 var db_name = "res://data/test"
 var db = SQLite.new()
 
-onready var text_input = $MarginContainer/VBoxContainer/TextInput
-onready var text_output = $MarginContainer/VBoxContainer/Panel/Output
+onready var text_input = $VBoxContainer/MarginContainer/VBoxContainer/TextInput
+onready var text_output = $VBoxContainer/MarginContainer/VBoxContainer/Panel/Output
 
 func _ready():
 	db.path = db_name
@@ -86,13 +86,16 @@ func load_data(db) -> void:
 
 func _input(event):
 	if event.is_action("ui_accept"):
-		submit()
+		_run_sql()
 
-func submit():
+func _run_sql():
 	var text: String = text_input.text
 	db.open_db()
-	db.query(text)
-	text_output.set_result(db.query_result)
+	var query_ok: bool = db.query(text)
+	if query_ok:
+		text_output.set_result(db.query_result)
+	else:
+		text_output.set_error()
 	db.close_db()
 
 func _on_ShowDatabaseButton_pressed():

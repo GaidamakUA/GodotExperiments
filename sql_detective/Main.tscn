@@ -682,3 +682,4 @@ Recall: The Security table has 151 rows but only 10 that satisfy the join condit
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/ShowDatabaseButton" to="." method="_on_ShowDatabaseButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/ShowCluesButton" to="." method="_on_ShowCluesButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/TutorialButton" to="TutorialPopup" method="popup"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/VBoxContainer/RunButton" to="." method="_run_sql"]

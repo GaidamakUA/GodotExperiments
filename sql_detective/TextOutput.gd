@@ -18,3 +18,7 @@ func set_result(rows: Array) -> void:
 			add_text(String(row[key]))
 			pop()
 	pop()
+
+func set_error() -> void:
+	clear()
+	add_text("SQL Error")
