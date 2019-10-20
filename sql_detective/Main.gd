@@ -9,8 +9,11 @@ onready var text_output = $MarginContainer/VBoxContainer/Panel/Output
 
 func _ready():
 	db.path = db_name
-	db.verbose_mode = false#true
 	db.open_db()
+	db.query("DROP TABLE security")
+	db.query("DROP TABLE employee")
+	db.query("DROP TABLE lobby")
+	db.query("DROP TABLE hardware")
 	db.query("""CREATE TABLE security  (
     badge_number CHAR(5) NOT NULL PRIMARY KEY,
     sign_out_date DATE,
@@ -54,7 +57,6 @@ func load_data(db) -> void:
 		var csv: PoolStringArray = file.get_csv_line("|")
 		if csv.size() == 1:
 			continue
-		print(csv.size())
 		var inser_command: String = "INSERT INTO employee VALUES (\"" + csv[0] + "\",\""  + csv[1] + "\",\""  + csv[2] + "\",\""  + csv[3] + "\",\""  + csv[4] + "\",\""  + csv[5] + "\",\""  + csv[6] + "\",\""  + csv[7] + "\",\""  + csv[8] + "\",\""  + csv[9] + "\")"
 		db.query(inser_command)
 
