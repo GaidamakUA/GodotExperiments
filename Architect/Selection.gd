@@ -5,6 +5,10 @@ class_name Selection
 var first_grid_position := Vector2()
 var second_grid_position := Vector2()
 var is_selecting := false
+var is_selected: bool setget ,_is_selected
+
+func _is_selected() -> bool:
+	return first_grid_position != second_grid_position
 
 func get_grid_size() -> Vector2:
 	var fixed_grid_size := _get_size()
