@@ -13,7 +13,8 @@ func _ready():
 
 func _input(event):
 	if event.is_action_released("left_click"):
-		is_dragging = false
+		if is_dragging:
+			is_dragging = false
 		selection.is_selecting = false
 		return
 	if event.is_action_pressed("left_click"):
