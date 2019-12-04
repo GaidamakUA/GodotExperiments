@@ -10,11 +10,17 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
+"class": "Dragging",
+"language": "GDScript",
+"path": "res://Dragging.gd"
+}, {
+"base": "Node",
 "class": "Selection",
 "language": "GDScript",
 "path": "res://Selection.gd"
 } ]
 _global_script_class_icons={
+"Dragging": "",
 "Selection": ""
 }
 
