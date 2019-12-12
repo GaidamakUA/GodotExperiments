@@ -6,13 +6,16 @@ onready var drag_layer: TileMap = $DragLayer
 onready var selection: Selection = $Selection
 onready var dragging: Dragging = $Dragging
 
-func _ready():
-	drag_layer.set_cell(0,0,0)
-
 func _input(event):
 	if event.is_action_released("left_click"):
 		if dragging.is_dragging:
+			selection.rect = Rect2()
 			dragging.is_dragging = false
+			var used_cells = drag_layer.get_used_cells()
+			for cellv in used_cells:
+				var tile = drag_layer.get_cellv(cellv)
+				picture_layer.set_cellv(cellv, tile)
+			drag_layer.clear()
 		selection.is_selecting = false
 		return
 	if event.is_action_pressed("left_click"):
@@ -25,18 +28,9 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		if dragging.is_dragging:
 			drag_layer.clear()
-			var rect_size = selection.rect.size
-			var rect_start = selection.rect.position
 			dragging.second_grid_position = to_grid(event.global_position)
-			for x in range(0, rect_size.x):
-				for y in range(0,rect_size.y):
-					var vector := Vector2(x, y)
-					var source:Vector2 = vector + rect_start
-					var tile = picture_layer.get_cellv(source)
-					print(source, ",tile=", tile)
-					var dest:Vector2 = source + dragging.get_drag()
-					print(dest)
-					drag_layer.set_cellv(dest, tile)
+			var dest_position = selection.rect.position + dragging.get_drag()
+			_copy_region(picture_layer, selection.rect, drag_layer, dest_position)
 		if selection.is_selecting:
 			selection.set_second_position(to_grid(event.global_position))
 			selection_border.rect_global_position = from_grid(selection.rect.position) / 2

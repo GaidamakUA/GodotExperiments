@@ -20,15 +20,11 @@ tile_set = ExtResource( 2 )
 cell_size = Vector2( 16, 16 )
 format = 1
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-margin_right = 40.0
-margin_bottom = 40.0
-color = Color( 1, 1, 1, 0.211765 )
-
 [node name="RectOutline" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = -52.6979
+margin_top = 10.9252
+margin_right = -12.6979
+margin_bottom = 50.9252
 script = ExtResource( 3 )
 
 [node name="Dragging" type="Node" parent="."]
