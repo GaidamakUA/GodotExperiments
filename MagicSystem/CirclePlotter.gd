@@ -24,7 +24,7 @@ func _draw():
 	if _point_trace.size() > 100:
 		_point_trace.resize(100)
 	if show_trace:
-		draw_multiline(_point_trace, Color.brown)
+		draw_multiline(_point_trace, Color.rosybrown)
 	for circle in _circles:
 		if draw_circles:
 			draw_circle_no_fill(position, circle.length() * scale_factor, Color.aqua)
