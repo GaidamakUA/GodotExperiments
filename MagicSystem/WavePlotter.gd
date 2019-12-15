@@ -4,11 +4,8 @@ export var plot_y := true
 export var plot_x := true
 
 var _points := PoolVector2Array()
-var _max_value := 0.0
 
 func _draw():
-	if _max_value == 0:
-		return
 	var amplitude = rect_size.y / 2
 	var y_points := PoolRealArray()
 	var x_points := PoolRealArray()
@@ -31,15 +28,13 @@ func _plot_line_data(data: PoolRealArray, color: Color):
 	draw_polyline(plot_points, color, 1, true)
 
 func _on_CircleModel_circles_moved(circles: PoolVector2Array):
-	var sum_point = Vector2(0, 0)
-	_max_value = 0
-	print(circles)
+	var sum_point := Vector2(0, 0)
+	var max_value := 0.0
 	for circle in circles:
 		sum_point += circle
-		_max_value += circle.length()
-	sum_point = sum_point / _max_value
-	print (sum_point, _max_value)
+		max_value += circle.length()
+	sum_point = sum_point / max_value
 	_points.insert(0, sum_point)
-	if (_points.size() > rect_size.y):
-		_points.resize(rect_size.y)
+	if (_points.size() > rect_size.x):
+		_points.resize(rect_size.x)
 	update()
