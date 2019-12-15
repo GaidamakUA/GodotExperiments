@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/fourier.png-1a9825c8bb635ec04c9c4dfc48c66cdd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
+source_file="res://fourier.png"
+dest_files=[ "res://.import/fourier.png-1a9825c8bb635ec04c9c4dfc48c66cdd.stex" ]
 
 [params]
 
