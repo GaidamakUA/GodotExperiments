@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://LSystem/LSystem.gd" type="Script" id=1]
+[ext_resource path="res://LSystem/Turtle.gd" type="Script" id=2]
+[ext_resource path="res://LSystem/Rule.gd" type="Script" id=3]
+[ext_resource path="res://LSystem/Axiom.gd" type="Script" id=4]
+
+[node name="LSystem" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+iterations = 14
+
+[node name="Turtle" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+inital_line = Vector2( 0, 3 )
+angle = 90
+step_size = 0.45
+
+[node name="Rules" type="Node" parent="."]
+
+[node name="Rule" type="Node" parent="Rules"]
+script = ExtResource( 3 )
+symbol = "l"
+rule = "l+rF+"
+
+[node name="Rule2" type="Node" parent="Rules"]
+script = ExtResource( 3 )
+symbol = "r"
+rule = "-Fl-r"
+
+[node name="Axiom" type="Node" parent="."]
+script = ExtResource( 4 )
+axiom = "Fl"

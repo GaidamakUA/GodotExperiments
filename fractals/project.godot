@@ -8,15 +8,32 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "Axiom",
+"language": "GDScript",
+"path": "res://LSystem/Axiom.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Particle",
+"language": "GDScript",
+"path": "res://DiffuseFractal/Particle.gd"
+}, {
+"base": "Node",
+"class": "Rule",
+"language": "GDScript",
+"path": "res://LSystem/Rule.gd"
+} ]
 _global_script_class_icons={
-
+"Axiom": "",
+"Particle": "",
+"Rule": ""
 }
 
 [application]
 
 config/name="Fractals"
-run/main_scene="res://Cantor.tscn"
+run/main_scene="res://DiffuseFractal/DiffuseFractal.tscn"
 config/icon="res://icon.png"
 
 [rendering]

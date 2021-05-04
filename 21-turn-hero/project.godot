@@ -1,0 +1,64 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Resource",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://enemies/Enemy.gd"
+}, {
+"base": "Node2D",
+"class": "GameMap",
+"language": "GDScript",
+"path": "res://game_map/GameMap.gd"
+}, {
+"base": "Resource",
+"class": "Item",
+"language": "GDScript",
+"path": "res://items/Item.gd"
+}, {
+"base": "Item",
+"class": "Wearable",
+"language": "GDScript",
+"path": "res://items/Wearable.gd"
+} ]
+_global_script_class_icons={
+"Enemy": "",
+"GameMap": "",
+"Item": "",
+"Wearable": ""
+}
+
+[application]
+
+config/name="21-turn-hero"
+run/main_scene="res://MainScreen.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+PlayerStats="*res://PlayerStats.gd"
+
+[display]
+
+window/size/width=1280
+window/size/height=1024
+window/dpi/allow_hidpi=true
+window/stretch/mode="2d"
+window/stretch/aspect="keep_height"
+
+[layer_names]
+
+2d_physics/layer_1="impassable"
+
+[rendering]
+
+environment/default_clear_color=Color( 1, 1, 1, 1 )
+environment/default_environment="res://default_env.tres"

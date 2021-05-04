@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/medievalRTS_spritesheet@2.png" type="Texture" id=1]
+[ext_resource path="res://Player.gd" type="Script" id=2]
+
+[node name="Hero" type="Sprite"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1058, 1042, 32, 48 )
+script = ExtResource( 2 )
+
+[node name="Down" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, 128 )
+
+[node name="Up" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, -128 )
+
+[node name="Left" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( -128, 0 )
+
+[node name="Right" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 128, 0 )

@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ui/BrushGroup.gd" type="Script" id=6]
+
+[node name="BrushGroup" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -956.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+margin_right = 70.0
+margin_bottom = 14.0
+text = "Title"
+
+[node name="ButtonContainer" type="GridContainer" parent="."]
+margin_top = 18.0
+margin_right = 70.0
+margin_bottom = 52.0
+custom_constants/vseparation = 2
+custom_constants/hseparation = 2
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}

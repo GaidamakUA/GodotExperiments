@@ -1,0 +1,403 @@
+[gd_scene load_steps=81 format=2]
+
+[ext_resource path="res://tiles/hull_2x2/ship_hull_2x2_0.tres" type="Texture" id=1]
+[ext_resource path="res://Editor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://tiles/hull_2x2/ship_hull_2x2_5.tres" type="Texture" id=3]
+[ext_resource path="res://tiles/hull_2x2/ship_hull_2x2_3.tres" type="Texture" id=4]
+[ext_resource path="res://tiles/hull_2x2/ship_hull_2x2_4.tres" type="Texture" id=5]
+[ext_resource path="res://tiles/hull_2x2/ship_hull_2x2_1.tres" type="Texture" id=6]
+[ext_resource path="res://EditorInterface.gd" type="Script" id=7]
+[ext_resource path="res://tiles/hull_2x4/ship_hull_2x3_1.tres" type="Texture" id=8]
+[ext_resource path="res://tiles/hull_1x1/ship_hull_1x1_0.tres" type="Texture" id=9]
+[ext_resource path="res://tiles/hull_1x1/ship_hull_1x1_2.tres" type="Texture" id=10]
+[ext_resource path="res://tiles/hull_1x1/ship_hull_1x1_4.tres" type="Texture" id=11]
+[ext_resource path="res://tiles/hull_1x1/ship_hull_1x1_1.tres" type="Texture" id=12]
+[ext_resource path="res://tiles/hull_2x3/ship_hull_2x3_0.tres" type="Texture" id=13]
+[ext_resource path="res://tiles/hull_2x3/ship_hull_2x3_1.tres" type="Texture" id=14]
+[ext_resource path="res://ui/BrushGroup.tscn" type="PackedScene" id=15]
+[ext_resource path="res://tiles/hull_1x1/ship_hull_1x1_3.tres" type="Texture" id=16]
+[ext_resource path="res://tiles/hull_2x4/ship_hull_2x3_0.tres" type="Texture" id=17]
+[ext_resource path="res://tiles/vconnector_1x1/vconnector_1.tres" type="Texture" id=18]
+[ext_resource path="res://tiles/vconnector_1x1/vconnector_0.tres" type="Texture" id=19]
+[ext_resource path="res://tiles/vconnector_1x1/vconnector_2.tres" type="Texture" id=20]
+[ext_resource path="res://tiles/vconnector_2x1/vconnector_0.tres" type="Texture" id=21]
+[ext_resource path="res://tiles/vconnector_2x2/vconnector_0.tres" type="Texture" id=22]
+[ext_resource path="res://tiles/vconnector_2x2/vconnector_2.tres" type="Texture" id=23]
+[ext_resource path="res://tiles/vconnector_1x2/vconnector_3.tres" type="Texture" id=24]
+[ext_resource path="res://tiles/vconnector_2x2/vconnector_1.tres" type="Texture" id=25]
+[ext_resource path="res://tiles/vconnector_1x2/vconnector_2.tres" type="Texture" id=26]
+[ext_resource path="res://tiles/vconnector_1x2/vconnector_0.tres" type="Texture" id=27]
+[ext_resource path="res://tiles/vconnector_1x2/vconnector_1.tres" type="Texture" id=28]
+[ext_resource path="res://tiles/vconnector_2x1/vconnector_2.tres" type="Texture" id=29]
+[ext_resource path="res://tiles/vconnector_2x1/vconnector_1.tres" type="Texture" id=30]
+[ext_resource path="res://tiles/hconnector_1x1/hconnector_3.tres" type="Texture" id=31]
+[ext_resource path="res://tiles/hconnector_1x1/hconnector_1.tres" type="Texture" id=32]
+[ext_resource path="res://tiles/hconnector_1x1/hconnector_2.tres" type="Texture" id=33]
+[ext_resource path="res://tiles/hconnector_1x1/hconnector_0.tres" type="Texture" id=34]
+[ext_resource path="res://tiles/hconnector_1x2/hconnector_0.tres" type="Texture" id=35]
+[ext_resource path="res://tiles/hconnector_2x1/hconnector_0.tres" type="Texture" id=36]
+[ext_resource path="res://tiles/hconnector_1x2/hconnector_4.tres" type="Texture" id=37]
+[ext_resource path="res://tiles/hconnector_2x1/hconnector_1.tres" type="Texture" id=38]
+[ext_resource path="res://tiles/hconnector_1x2/hconnector_3.tres" type="Texture" id=39]
+[ext_resource path="res://tiles/hconnector_1x2/hconnector_1.tres" type="Texture" id=40]
+[ext_resource path="res://tiles/hconnector_1x2/hconnector_5.tres" type="Texture" id=41]
+[ext_resource path="res://tiles/hconnector_1x2/hconnector_2.tres" type="Texture" id=42]
+[ext_resource path="res://tiles/hconnector_2x3/hconnector_1.tres" type="Texture" id=43]
+[ext_resource path="res://tiles/hconnector_2x3/hconnector_0.tres" type="Texture" id=44]
+[ext_resource path="res://tiles/turbines_2x1/hconnector_3.tres" type="Texture" id=45]
+[ext_resource path="res://tiles/turbines_1x2/hconnector_0.tres" type="Texture" id=46]
+[ext_resource path="res://tiles/turbines_2x1/hconnector_0.tres" type="Texture" id=47]
+[ext_resource path="res://tiles/turbines_2x2/hconnector_0.tres" type="Texture" id=48]
+[ext_resource path="res://tiles/turbines_1x2/hconnector_2.tres" type="Texture" id=49]
+[ext_resource path="res://tiles/turbines_2x1/hconnector_4.tres" type="Texture" id=50]
+[ext_resource path="res://tiles/turbines_2x2/hconnector_4.tres" type="Texture" id=51]
+[ext_resource path="res://tiles/turbines_1x1/hconnector_4.tres" type="Texture" id=52]
+[ext_resource path="res://tiles/turbines_1x1/hconnector_1.tres" type="Texture" id=53]
+[ext_resource path="res://tiles/turbines_2x2/hconnector_2.tres" type="Texture" id=54]
+[ext_resource path="res://tiles/turbines_2x2/hconnector_1.tres" type="Texture" id=55]
+[ext_resource path="res://tiles/turbines_2x1/hconnector_2.tres" type="Texture" id=56]
+[ext_resource path="res://tiles/turbines_1x1/hconnector_0.tres" type="Texture" id=57]
+[ext_resource path="res://tiles/turbines_2x1/hconnector_1.tres" type="Texture" id=58]
+[ext_resource path="res://tiles/turbines_2x2/hconnector_3.tres" type="Texture" id=59]
+[ext_resource path="res://tiles/turbines_1x2/hconnector_3.tres" type="Texture" id=60]
+[ext_resource path="res://tiles/turbines_1x1/hconnector_3.tres" type="Texture" id=61]
+[ext_resource path="res://tiles/turbines_1x2/hconnector_1.tres" type="Texture" id=62]
+[ext_resource path="res://tiles/turbines_2x1/hconnector_5.tres" type="Texture" id=63]
+[ext_resource path="res://tiles/turbines_1x2/hconnector_4.tres" type="Texture" id=64]
+[ext_resource path="res://tiles/turbines_1x1/hconnector_2.tres" type="Texture" id=65]
+[ext_resource path="res://tiles/guns_1x1/gun_2.tres" type="Texture" id=66]
+[ext_resource path="res://tiles/guns_1x1/gun_4.tres" type="Texture" id=67]
+[ext_resource path="res://tiles/guns_1x1/gun_3.tres" type="Texture" id=68]
+[ext_resource path="res://tiles/guns_1x1/gun_0.tres" type="Texture" id=69]
+[ext_resource path="res://tiles/guns_1x1/gun_1.tres" type="Texture" id=70]
+[ext_resource path="res://tiles/guns_1x2/gun_2.tres" type="Texture" id=71]
+[ext_resource path="res://tiles/guns_1x2/gun_0.tres" type="Texture" id=72]
+[ext_resource path="res://tiles/guns_1x2/gun_1.tres" type="Texture" id=73]
+[ext_resource path="res://tiles/guns_1x2/gun_4.tres" type="Texture" id=74]
+[ext_resource path="res://tiles/guns_1x2/gun_3.tres" type="Texture" id=75]
+[ext_resource path="res://tiles/guns_2x2/gun_2.tres" type="Texture" id=76]
+[ext_resource path="res://tiles/guns_2x2/gun_4.tres" type="Texture" id=77]
+[ext_resource path="res://tiles/guns_2x2/gun_0.tres" type="Texture" id=78]
+[ext_resource path="res://tiles/guns_2x2/gun_1.tres" type="Texture" id=79]
+[ext_resource path="res://tiles/guns_2x2/gun_3.tres" type="Texture" id=80]
+
+[node name="EditorInterface" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+editor_path = NodePath("VBoxContainer/HBoxContainer/ViewportContainer/Viewport/Editor")
+viewport_path = NodePath("VBoxContainer/HBoxContainer/ViewportContainer/Viewport")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 0, 32 )
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExportButton" type="Button" parent="VBoxContainer/Panel/HBoxContainer"]
+margin_right = 84.0
+margin_bottom = 32.0
+text = "Export PNG"
+
+[node name="Control" type="Control" parent="VBoxContainer/Panel/HBoxContainer"]
+margin_left = 88.0
+margin_right = 969.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+
+[node name="Flip" type="CheckBox" parent="VBoxContainer/Panel/HBoxContainer"]
+margin_left = 973.0
+margin_right = 1024.0
+margin_bottom = 32.0
+text = "Flip"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 32.0
+margin_right = 1024.0
+margin_bottom = 600.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ViewportContainer" type="ViewportContainer" parent="VBoxContainer/HBoxContainer"]
+margin_right = 898.0
+margin_bottom = 568.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="Viewport" type="Viewport" parent="VBoxContainer/HBoxContainer/ViewportContainer"]
+size = Vector2( 898, 568 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Editor" parent="VBoxContainer/HBoxContainer/ViewportContainer/Viewport" instance=ExtResource( 2 )]
+
+[node name="Panel" type="Panel" parent="VBoxContainer/HBoxContainer"]
+margin_left = 902.0
+margin_right = 1024.0
+margin_bottom = 568.0
+rect_min_size = Vector2( 122, 48 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/HBoxContainer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer"]
+margin_right = 122.0
+margin_bottom = 1122.0
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 114.0
+margin_bottom = 1114.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Hull1x1" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 106.0
+margin_bottom = 34.0
+title = "Hull 1x1"
+buttons = [ ExtResource( 9 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 16 ), ExtResource( 11 ) ]
+
+[node name="Hull2x2" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 38.0
+margin_right = 106.0
+margin_bottom = 124.0
+title = "Hull 2x2"
+brush_width = 2
+brush_height = 2
+buttons = [ ExtResource( 1 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 3 ) ]
+
+[node name="Hull2x3" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 128.0
+margin_right = 106.0
+margin_bottom = 194.0
+title = "Hull 2x3"
+brush_width = 2
+brush_height = 3
+buttons = [ ExtResource( 13 ), ExtResource( 14 ) ]
+
+[node name="Hull2x4" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 198.0
+margin_right = 106.0
+margin_bottom = 280.0
+title = "Hull 2x4"
+brush_width = 2
+brush_height = 4
+buttons = [ ExtResource( 17 ), ExtResource( 8 ) ]
+
+[node name="VConnector1x1" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 284.0
+margin_right = 106.0
+margin_bottom = 318.0
+title = "VConnector 1x1"
+buttons = [ ExtResource( 19 ), ExtResource( 18 ), ExtResource( 20 ) ]
+
+[node name="VConnector2x1" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 322.0
+margin_right = 106.0
+margin_bottom = 376.0
+title = "VConnector 2x1"
+brush_width = 2
+buttons = [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 26 ), ExtResource( 24 ) ]
+
+[node name="VConnector1x2" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 380.0
+margin_right = 106.0
+margin_bottom = 430.0
+title = "VConnector 1x2"
+brush_height = 2
+buttons = [ ExtResource( 21 ), ExtResource( 30 ), ExtResource( 29 ) ]
+
+[node name="VConnector2x2" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 434.0
+margin_right = 106.0
+margin_bottom = 484.0
+title = "VConnector 1x2"
+brush_width = 2
+brush_height = 2
+buttons = [ ExtResource( 22 ), ExtResource( 25 ), ExtResource( 23 ) ]
+
+[node name="HConnector1x1" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 488.0
+margin_right = 106.0
+margin_bottom = 522.0
+title = "HConnector 1x1"
+buttons = [ ExtResource( 34 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 31 ) ]
+
+[node name="HConnector1x2" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 526.0
+margin_right = 106.0
+margin_bottom = 576.0
+title = "HConnector 1x2"
+brush_height = 2
+buttons = [ ExtResource( 35 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 39 ), ExtResource( 37 ), ExtResource( 41 ) ]
+
+[node name="HConnector2x1" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 580.0
+margin_right = 106.0
+margin_bottom = 614.0
+title = "HConnector 2x1"
+brush_width = 2
+buttons = [ ExtResource( 36 ), ExtResource( 38 ) ]
+
+[node name="HConnector2x3" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 618.0
+margin_right = 106.0
+margin_bottom = 684.0
+title = "HConnector 2x1"
+brush_width = 2
+brush_height = 3
+buttons = [ ExtResource( 44 ), ExtResource( 43 ) ]
+
+[node name="Turbines1x1" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 688.0
+margin_right = 106.0
+margin_bottom = 722.0
+title = "Turbines 1x1"
+buttons = [ ExtResource( 57 ), ExtResource( 53 ), ExtResource( 65 ), ExtResource( 61 ), ExtResource( 52 ) ]
+
+[node name="Turbines1x2" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 726.0
+margin_right = 106.0
+margin_bottom = 776.0
+title = "Turbines 1x2"
+brush_height = 2
+buttons = [ ExtResource( 46 ), ExtResource( 62 ), ExtResource( 49 ), ExtResource( 60 ), ExtResource( 64 ) ]
+
+[node name="Turbines2x1" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 780.0
+margin_right = 106.0
+margin_bottom = 834.0
+title = "Turbines 2x1"
+brush_width = 2
+buttons = [ ExtResource( 47 ), ExtResource( 58 ), ExtResource( 56 ), ExtResource( 45 ), ExtResource( 50 ), ExtResource( 63 ) ]
+
+[node name="Turbines2x2" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 838.0
+margin_right = 106.0
+margin_bottom = 924.0
+title = "Turbines 2x2"
+brush_width = 2
+brush_height = 2
+buttons = [ ExtResource( 48 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 59 ), ExtResource( 51 ) ]
+
+[node name="Guns1x1" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 928.0
+margin_right = 106.0
+margin_bottom = 962.0
+title = "Guns 1x1"
+buttons = [ ExtResource( 69 ), ExtResource( 70 ), ExtResource( 66 ), ExtResource( 68 ), ExtResource( 67 ) ]
+
+[node name="Guns1x2" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 966.0
+margin_right = 106.0
+margin_bottom = 1016.0
+title = "Guns 1x2"
+brush_height = 2
+buttons = [ ExtResource( 72 ), ExtResource( 73 ), ExtResource( 71 ), ExtResource( 75 ), ExtResource( 74 ) ]
+
+[node name="Guns2x2" parent="VBoxContainer/HBoxContainer/Panel/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource( 15 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 1020.0
+margin_right = 106.0
+margin_bottom = 1106.0
+title = "Guns 1x2"
+brush_width = 2
+brush_height = 2
+buttons = [ ExtResource( 78 ), ExtResource( 79 ), ExtResource( 76 ), ExtResource( 80 ), ExtResource( 77 ) ]
+
+[node name="SavePngDialog" type="FileDialog" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -208.0
+margin_top = -92.0
+margin_right = 208.0
+margin_bottom = 92.0
+rect_min_size = Vector2( 400, 140 )
+window_title = "Export as PNG"
+access = 2
+filters = PoolStringArray( "png" )
+current_dir = "/Users/gaidmakua/workspace/godot/my projects/GodotExperiments/ModularShip"
+current_path = "/Users/gaidmakua/workspace/godot/my projects/GodotExperiments/ModularShip/"
+
+[connection signal="pressed" from="VBoxContainer/Panel/HBoxContainer/ExportButton" to="." method="_on_ExportButton_pressed"]
+[connection signal="toggled" from="VBoxContainer/Panel/HBoxContainer/Flip" to="." method="_on_Flip_toggled"]
+[connection signal="file_selected" from="SavePngDialog" to="." method="_on_SavePngDialog_file_selected"]
