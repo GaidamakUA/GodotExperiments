@@ -6,7 +6,7 @@ var flip_tile := false setget _on_flip_state_changed
 
 onready var tile_map: TileMap = $TileMap
 onready var tile_set: TileSet = tile_map.tile_set
-onready var sprite: Sprite = $Sprite
+onready var sprite: Sprite = $Cursor
 var hull_tile = preload("res://tiles/hull_2x2/ship_hull_2x2_0.tres")
 
 var map_position: Vector2
@@ -39,6 +39,12 @@ func set_brush(texture: AtlasTexture):
 		tile_set.tile_set_texture(max_tile_id, texture)
 		tile_id = max_tile_id
 	sprite.texture = texture
+
+func hide_cursor():
+	sprite.hide()
+
+func show_cursor():
+	sprite.show()
 
 func _on_flip_state_changed(value: bool):
 	flip_tile = value

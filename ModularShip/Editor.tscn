@@ -14,7 +14,7 @@ tile_set = SubResource( 1 )
 cell_size = Vector2( 8, 8 )
 format = 1
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Cursor" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 centered = false
 region_rect = Rect2( 64, 176, 16, 16 )
