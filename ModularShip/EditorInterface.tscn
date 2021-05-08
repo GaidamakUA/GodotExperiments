@@ -121,9 +121,28 @@ text = "Export PNG"
 
 [node name="Control" type="Control" parent="VBoxContainer/Panel/HBoxContainer"]
 margin_left = 88.0
-margin_right = 969.0
+margin_right = 868.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel/HBoxContainer"]
+margin_left = 872.0
+margin_top = 9.0
+margin_right = 909.0
+margin_bottom = 23.0
+text = "Color:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="VBoxContainer/Panel/HBoxContainer"]
+margin_left = 913.0
+margin_right = 969.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 56, 0 )
+flat = true
+color = Color( 1, 1, 1, 1 )
+edit_alpha = false
 
 [node name="Flip" type="CheckBox" parent="VBoxContainer/Panel/HBoxContainer"]
 margin_left = 973.0
@@ -400,5 +419,6 @@ __meta__ = {
 }
 
 [connection signal="pressed" from="VBoxContainer/Panel/HBoxContainer/ExportButton" to="." method="_on_ExportButton_pressed"]
+[connection signal="color_changed" from="VBoxContainer/Panel/HBoxContainer/ColorPickerButton" to="." method="_on_ColorPickerButton_color_changed"]
 [connection signal="toggled" from="VBoxContainer/Panel/HBoxContainer/Flip" to="." method="_on_Flip_toggled"]
 [connection signal="file_selected" from="SavePngDialog" to="." method="_on_SavePngDialog_file_selected"]

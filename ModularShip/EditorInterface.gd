@@ -50,9 +50,9 @@ func _on_SavePngDialog_file_selected(path):
 				min_y = min(min_y, y)
 				max_x = max(max_x, x)
 				max_y = max(max_y, y)
-	texture_data.unlock()
-	var rect = Rect2(min_x, min_y, max_x, max_y)
+	var rect = Rect2(min_x, min_y, max_x - min_x, max_y - min_y)
 	texture_data = texture_data.get_rect(rect)
+	texture_data.unlock()
 	texture_data.convert(Image.FORMAT_RGBA8)
 	if OS.get_name() == "HTML5":
 		var png_data = Array(texture_data.save_png_to_buffer())
@@ -67,3 +67,7 @@ func _on_ExportButton_pressed():
 		_on_SavePngDialog_file_selected("ignored")
 	else:
 		$SavePngDialog.show()
+
+
+func _on_ColorPickerButton_color_changed(color):
+	editor.modulate = color
